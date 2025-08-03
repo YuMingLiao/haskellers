@@ -1,4 +1,9 @@
 {-# LANGUAGE DeriveDataTypeable #-}
+{-# LANGUAGE DerivingStrategies #-}
+{-# LANGUAGE StandaloneDeriving #-}
+{-# LANGUAGE UndecidableInstances #-}
+{-# LANGUAGE DataKinds #-}
+{-# LANGUAGE FlexibleInstances #-}
 module Model
     ( module Model
     , module Model.Types
@@ -20,11 +25,7 @@ import Model.Types
 -- http://www.yesodweb.com/book/persistent/
 share [mkPersist sqlSettings, mkMigrate "migrateAll"]
     $(persistFileWith upperCaseSettings
-        { psToDBName = \t ->
-            if not (T.null t) && isUpper (T.head t)
-                then "Haskellers__" `append` psToDBName upperCaseSettings t
-                else psToDBName upperCaseSettings t
-        } "config/models")
+        "config/models")
 
 userFullName' :: User -> Text
 userFullName' u =

@@ -57,26 +57,12 @@ packages:
   original:
     url: https://github.com/snoyberg/yesod-form-richtext/archive/c1d76b3b1b690db1c5452926fc55d5f585ca49c1.tar.gz
 - completed:
-    hackage: cryptocipher-0.6.2@sha256:b24531e611baf5db5130e056ac8c619b94fce1a7807d97faad4c609fe2abb70b,1103
-    pantry-tree:
-      sha256: 0da6a58dff753dc6d707b5d1e25b68c7f80c52661529f0637c3c0d83ba73d269
-      size: 213
-  original:
-    hackage: cryptocipher-0.6.2@sha256:b24531e611baf5db5130e056ac8c619b94fce1a7807d97faad4c609fe2abb70b,1103
-- completed:
     hackage: yesod-auth-fb-1.10.1@sha256:cbd93b3c90574b999e01361c3e96bd80382483a334bdba6dc0d0088ad618c024,2562
     pantry-tree:
       sha256: 1d8c93711ad13d5d75afaf7668a445022f0d84a6ef6df37ad985f99278f5f431
       size: 540
   original:
     hackage: yesod-auth-fb-1.10.1@sha256:cbd93b3c90574b999e01361c3e96bd80382483a334bdba6dc0d0088ad618c024,2562
-- completed:
-    hackage: cipher-blowfish-0.0.3@sha256:aa8fddef17ba57c2ef31f335ab474f16dfa106f903c257b16f6f578c07957406,1932
-    pantry-tree:
-      sha256: 59b4f1e339cd0eb82f66808a152b6bd4c0fad2ad7315c3504373d79d294cac2b
-      size: 421
-  original:
-    hackage: cipher-blowfish-0.0.3@sha256:aa8fddef17ba57c2ef31f335ab474f16dfa106f903c257b16f6f578c07957406,1932
 snapshots:
 - completed:
     sha256: 428ec8d5ce932190d3cbe266b9eb3c175cd81e984babf876b64019e2cbe4ea68

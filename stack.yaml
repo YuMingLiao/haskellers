@@ -12,9 +12,7 @@ extra-deps:
 - uri-bytestring-aeson-0.1.0.7@sha256:33d83caa4704f07112564b98cb4b2e7b87f3f185e2e520c8d3444b95967d11f3
 - github: snoyberg/yesod-form-richtext
   commit: c1d76b3b1b690db1c5452926fc55d5f585ca49c1
-- cryptocipher-0.6.2@sha256:b24531e611baf5db5130e056ac8c619b94fce1a7807d97faad4c609fe2abb70b,1103
 - yesod-auth-fb-1.10.1@sha256:cbd93b3c90574b999e01361c3e96bd80382483a334bdba6dc0d0088ad618c024,2562
-- cipher-blowfish-0.0.3@sha256:aa8fddef17ba57c2ef31f335ab474f16dfa106f903c257b16f6f578c07957406,1932
 nix:
   pure: false
   enable: true

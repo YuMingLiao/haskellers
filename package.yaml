@@ -72,7 +72,7 @@ dependencies:
 - random
 - pureMD5
 - utf8-string
-- cryptocipher
+- cryptonite
 - base64-bytestring
 - mime-mail
 - mime-mail-ses

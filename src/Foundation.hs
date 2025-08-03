@@ -491,7 +491,7 @@ instance YesodAuthPersist App
 instance YesodFacebook App where
     fbCredentials app =
         let (name, id', secret) = appFacebookCreds app
-         in Credentials name id' secret
+         in Credentials name id' secret True
     fbHttpManager = authHttpManager
 
 login :: Widget

@@ -79,7 +79,6 @@ dependencies:
 - resourcet
 - monad-logger
 - aeson
-- cipher-aes
 - yesod-gitrev
 - unordered-containers
 - unliftio

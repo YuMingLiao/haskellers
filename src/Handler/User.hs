@@ -14,21 +14,17 @@ import Handler.Root (gravatar)
 import Data.List (sortBy, intercalate)
 import Data.Ord (comparing)
 import Data.Maybe (fromMaybe)
-import qualified Data.ByteString as S
-import qualified Data.ByteString.Char8 as S8
-import qualified Data.ByteString.UTF8 as SU
 import Yesod.Form.Jquery (urlJqueryJs)
 import Data.Time (getCurrentTime)
 import qualified Data.Text as T
 import Data.Text.Encoding (encodeUtf8, decodeUtf8With)
 import Data.Text.Encoding.Error (lenientDecode)
 import qualified Data.Text.Read
-import qualified Data.ByteString.Base64 as B64
-import qualified Crypto.Cipher.AES as AES
 import Network.HTTP.Types (status301)
 import Network.HTTP.Simple
 import UnliftIO (tryAny)
 import Control.Monad (when)
+import qualified Control.Monad.Fail as Fail
 
 getByIdentR :: Handler Value
 getByIdentR = do
@@ -41,6 +37,9 @@ getByIdentR = do
             [ "id"  .= toPathPiece (uid :: UserId)
             , "url" .= render (UserR $ toPathPiece uid)
             ]
+
+instance Fail.MonadFail (HandlerFor site) where
+    fail = error
 
 getUserR :: Text -> Handler TypedContent
 getUserR input = do

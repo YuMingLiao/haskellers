@@ -68,12 +68,12 @@ postSendVerifyR = do
                 , mailCc = []
                 , mailBcc = []
                 , mailParts = return
-                    [ Part "text/plain" None Nothing [] $ LU.fromString $ unlines
+                    [ Part "text/plain" None DefaultDisposition [] $ PartContent . LU.fromString $ unlines
                         [ "Please go to the URL below to verify your email address."
                         , ""
                         , unpack url
                         ]
-                    , Part "text/html" None Nothing [] $ renderHtml [shamlet|\
+                    , Part "text/html" None DefaultDisposition [] $ (PartContent . renderHtml) [shamlet|\
 <img src="#{render (StaticR logo_png)}" alt="Haskellers">
 <p>Please go to the URL below to verify your email address.
 <p>

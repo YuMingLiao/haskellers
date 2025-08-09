@@ -592,4 +592,4 @@ userFullName =
     go x = x
 
 addMapAPI :: Widget
-addMapAPI = addScriptRemote "https://maps.google.com/maps/api/js?key=AIzaSyDEXQ0UTJmzcw1h1AUs4iZz9qhVpuy15Ro"
+addMapAPI = addScriptRemote "https://maps.google.com/maps/api/js?key=AIzaSyCOtH794KlFo6b4-rxO1uMnhd9mJiJXFeU"

@@ -57,6 +57,7 @@ dependencies:
 - http-conduit
 - directory
 - warp
+- warp-tls
 - blaze-html
 - data-default
 - time
@@ -99,7 +100,7 @@ library:
 
 executables:
   haskellers:
-    main: main.hs
+    main: devel.hs
     source-dirs: app
     ghc-options:
     - -threaded

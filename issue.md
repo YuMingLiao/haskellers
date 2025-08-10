@@ -5,3 +5,12 @@
       A: 用 warp-tls, devel.hs, port 8080 即可。
 
 - [x] Facebook Developer的應用程式網域要用localhost，不能用127.0.0.1。Facebook Login至此成功了。
+
+
+- yesod use makeSessionBackend method to set client cookie.
+- wai use mapResponseHeaders to set cookie.
+- wai-session use withSession and Vault.
+
+
+- OAuth in synchron <- route in concur-replica <- callback in kamoii-replica <- provide call in each sesssion
+- interactive google map in synchron <- dispatch leaflet events to div dom when leaflet events fire

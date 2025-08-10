@@ -20,10 +20,7 @@ pkgs.mkShell {
             # Create a test database (optional)
             # createuser nixos -W 
             # createdb haskellers 
-            trap 'pg_ctl -D .tmp/haskellers stop' EXIT
-            trap 'rm -rf .tmp/haskellers' EXIT
-            trap 'rm -rf .tmp' EXIT
-            trap 'rm logfile' EXIT
+            trap 'pg_ctl -D .tmp/haskellers stop; rm -rf .tmp/; rm logfile' EXIT
   '';
 
   # Optional: Stop PostgreSQL when exiting the shell
